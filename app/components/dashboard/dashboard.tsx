@@ -1,11 +1,11 @@
 "use client"
 
 
-import {Header} from "@/app/components/header";
-import Sidebar from "@/app/components/sidebar";
-import HotCollections from "@/app/components/hot-collections";
-import RegularCollections from "@/app/components/reguler-collections";
-import TopBar from "@/app/components/topBar";
+import {Header} from "@/app/components/dashboard/header";
+import Sidebar from "@/app/components/dashboard/sidebar";
+import HotCollections from "@/app/components/dashboard/hot-collections";
+import RegularCollections from "@/app/components/dashboard/reguler-collections";
+import TopBar from "@/app/components/dashboard/topBar";
 
 export function Dashboard() {
     return (
