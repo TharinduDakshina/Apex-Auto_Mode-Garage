@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c208afbf-4262-4243-acac-cad7938389e9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/components/dashboard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/gashboard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/hot-collections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/hot-collections.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/reguler-collections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/reguler-collections.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/topBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/topBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,30 +29,30 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="34ojjk4IGcoscj6J2zdc7uS1Bwd" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "last_opened_file_path": "D:/Working arear/apex-auto-modes-garage/public/cars",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "application.passwordSafe",
-    "ts.external.directory.path": "D:\\Working arear\\apex-auto-modes-garage\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Working arear/apex-auto-modes-garage/public/cars&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;application.passwordSafe&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Working arear\\apex-auto-modes-garage\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -63,6 +65,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Working arear\apex-auto-modes-garage\public\cars" />
       <recent name="D:\Working arear\apex-auto-modes-garage\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Working arear\apex-auto-modes-garage\app\components\dashboard" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -80,7 +85,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761886958217</updated>
-      <workItem from="1761886962694" duration="19204000" />
+      <workItem from="1761886962694" duration="19396000" />
+      <workItem from="1761969351568" duration="4428000" />
     </task>
     <servers />
   </component>
