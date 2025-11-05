@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c208afbf-4262-4243-acac-cad7938389e9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/components/dashboard/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/signIn/api/signInApi.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/signUp/api/signUpApi.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/hot-collections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/hot-collections.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/reguler-collections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/reguler-collections.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/topBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/topBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/dashboard/dashboard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/dashboard/topBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/topBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/signIn/signIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/signIn/signIn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/signUp/signUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/signUp/signUp.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -58,6 +59,7 @@
       <map>
         <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
         <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
       </map>
     </option>
   </component>
@@ -67,6 +69,9 @@
       <recent name="D:\Working arear\apex-auto-modes-garage\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Working arear\apex-auto-modes-garage\app\components" />
+      <recent name="D:\Working arear\apex-auto-modes-garage\app\components\authentication\signUp" />
+      <recent name="D:\Working arear\apex-auto-modes-garage\app\components\authentication\signIn" />
       <recent name="D:\Working arear\apex-auto-modes-garage\app\components\dashboard" />
     </key>
   </component>
@@ -86,7 +91,10 @@
       <option name="presentableId" value="Default" />
       <updated>1761886958217</updated>
       <workItem from="1761886962694" duration="19396000" />
-      <workItem from="1761969351568" duration="4428000" />
+      <workItem from="1761969351568" duration="11002000" />
+      <workItem from="1762106132370" duration="84000" />
+      <workItem from="1762241321535" duration="8650000" />
+      <workItem from="1762333005664" duration="6255000" />
     </task>
     <servers />
   </component>
