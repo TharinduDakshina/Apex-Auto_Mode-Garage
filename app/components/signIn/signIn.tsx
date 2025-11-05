@@ -1,9 +1,35 @@
 "use client"
 
 import {useRouter} from "next/navigation";
+import React, {useState} from "react";
+import {signInApi} from "@/app/components/signIn/api/signInApi";
 
 export default function SignIn() {
     const router = useRouter()
+
+    const [form, setForm] = useState({
+        name: "",
+        password: "",
+    });
+
+    function handleOnChange(e: React.ChangeEvent<HTMLInputElement>) {
+        setForm({...form,[e.target.name]: e.target.value});
+    }
+
+   async function handelSubmission(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+
+        const res = await signInApi(form);
+
+        if (res){
+            setForm({name: "", password: "",});
+            router.push("/components/dashboard");
+        }else {
+            alert("Username or Password is incorrect");
+        }
+
+    }
+
     return (
         <div className="min-h-screen flex justify-center items-center">
 
@@ -21,22 +47,28 @@ export default function SignIn() {
                     Sign In
                 </h2>
 
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handelSubmission}>
                     <div>
                         <label className="block font-semibold mb-1 text-white">Email</label>
                         <input
-                            type="email"
+                            name="name"
+                            value={form.name}
+                            type="text"
                             className="w-full bg-white/80 border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-gray-500 focus:outline-none"
-                            placeholder="Email@example.com"
+                            placeholder="Jhone"
+                            onChange={handleOnChange}
                         />
                     </div>
 
                     <div>
                         <label className="block font-semibold mb-1 text-white">Password</label>
                         <input
+                            name="password"
+                            value={form.password}
                             type="password"
                             className="w-full bg-white/80 border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-gray-600 focus:outline-none"
                             placeholder="Password"
+                            onChange={handleOnChange}
                         />
                     </div>
 
