@@ -17,7 +17,7 @@ export default function HotCollections() {
                                 <h3 className="font-semibold text-foreground">Range Rover</h3>
                             </div>
 
-                            <img src="./cars/rangerover.webp" alt="ranerover-car" width="90%"
+                            <img src="../cars/rangerover.webp" alt="ranerover-car" width="90%"
                                  className="rounded-xl opacity-95 pt-8"/>
                         </div>
 
@@ -76,7 +76,7 @@ export default function HotCollections() {
                                 <h3 className="font-semibold text-foreground">Nisan GTR</h3>
                             </div>
 
-                            <img src="./cars/nisan_gtr.avif" alt="ranerover-car" width="90%"
+                            <img src="../cars/nisan_gtr.avif" alt="ranerover-car" width="90%"
                                  className="pt-8 rounded-xl opacity-95 "/>
                         </div>
 
