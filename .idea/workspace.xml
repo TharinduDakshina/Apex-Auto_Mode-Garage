@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c208afbf-4262-4243-acac-cad7938389e9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/components/dashboard/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/signIn/api/signInApi.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/signUp/api/signUpApi.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/dashboard/dashboard.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/dashboard/topBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/topBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/dashboard/hot-collections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/hot-collections.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/dashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/dashboard/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/sidebar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/signIn/signIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/signIn/signIn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/signUp/signUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/signUp/signUp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +42,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Working arear/apex-auto-modes-garage/public/cars&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Working arear/apex-auto-modes-garage/public/models&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -65,14 +64,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Working arear\apex-auto-modes-garage\public\models" />
       <recent name="D:\Working arear\apex-auto-modes-garage\public\cars" />
       <recent name="D:\Working arear\apex-auto-modes-garage\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Working arear\apex-auto-modes-garage\app\components\dashboard" />
+      <recent name="D:\Working arear\apex-auto-modes-garage\app\components\dashboard\components" />
       <recent name="D:\Working arear\apex-auto-modes-garage\app\components" />
       <recent name="D:\Working arear\apex-auto-modes-garage\app\components\authentication\signUp" />
       <recent name="D:\Working arear\apex-auto-modes-garage\app\components\authentication\signIn" />
-      <recent name="D:\Working arear\apex-auto-modes-garage\app\components\dashboard" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -94,7 +95,9 @@
       <workItem from="1761969351568" duration="11002000" />
       <workItem from="1762106132370" duration="84000" />
       <workItem from="1762241321535" duration="8650000" />
-      <workItem from="1762333005664" duration="6255000" />
+      <workItem from="1762333005664" duration="6773000" />
+      <workItem from="1762482107607" duration="7837000" />
+      <workItem from="1762499095633" duration="10286000" />
     </task>
     <servers />
   </component>

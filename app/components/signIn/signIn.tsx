@@ -31,15 +31,15 @@ export default function SignIn() {
     }
 
     return (
-        <div className="min-h-screen flex justify-center items-center">
+        <div className="min-h-screen w-screen flex overflow-auto justify-center items-center">
 
             <img
                 src="../cars/honda_civic.jpg"
                 alt="background-image"
-                className="absolute inset-0 w-full h-full object-cover opacity-80"
+                className="absolute inset-0 w-screen h-screen object-cover opacity-80"
             />
 
-            <div className="relative right-100 bottom-20 z-10 bg-black backdrop-blur-md border border-gray-200 rounded-2xl shadow-xl p-10 w-full max-w-lg mx-auto">
+            <div className="relative right-[20%] bottom-20 z-10 bg-black backdrop-blur-md border border-gray-200 rounded-2xl shadow-xl p-10 w-[100%] max-w-lg mx-auto">
                 <h1 className="text-4xl font-extrabold text-center mb-6 text-white tracking-wide uppercase">
                     Apex Auto Mods
                 </h1>
