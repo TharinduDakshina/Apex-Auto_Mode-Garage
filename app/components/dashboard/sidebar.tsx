@@ -7,7 +7,7 @@ import {logOut} from "@/app/components/dashboard/server";
 export default function Sidebar() {
     const router = useRouter()
 
-    async function handleLogout() {
+   async function handleLogout() {
         await logOut()
     }
 
