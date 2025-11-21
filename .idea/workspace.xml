@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c208afbf-4262-4243-acac-cad7938389e9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/dashboard/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/dashboard/server.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/dashboard/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/signIn/api/signInApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/signIn/api/signInApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/signIn/signIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/signIn/signIn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/middleware.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +99,14 @@
       <workItem from="1762482107607" duration="7837000" />
       <workItem from="1762499095633" duration="12550000" />
       <workItem from="1762745068931" duration="3692000" />
+      <workItem from="1763044634093" duration="29000" />
+      <workItem from="1763182145047" duration="384000" />
+      <workItem from="1763190727944" duration="8632000" />
+      <workItem from="1763310615018" duration="1238000" />
+      <workItem from="1763355400578" duration="602000" />
+      <workItem from="1763525103573" duration="7983000" />
+      <workItem from="1763559824118" duration="1302000" />
+      <workItem from="1763730343596" duration="2747000" />
     </task>
     <servers />
   </component>
