@@ -39,7 +39,7 @@ export default function RegularCollections() {
         <section>
             <h2 className="text-xl font-semibold text-foreground mb-6">Regular Collections</h2>
 
-            <div className="overflow-x-auto rounded-lg border border-border">
+            <div className="overflow-x-auto rounded-lg border border-border mb-8">
                 <table className="w-full">
                     <thead>
                     <tr className="border-b border-border bg-muted/50">

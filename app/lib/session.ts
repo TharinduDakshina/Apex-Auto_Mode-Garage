@@ -37,7 +37,7 @@ export async function updateAccessTokenToCookie(accessToken: string) {
         httpOnly: true,
         secure: true,
         sameSite: "strict",
-        maxAge: 60 * 60 , // 1H
+        maxAge: 60 * 30 , // 1H
         path: "/"
     });
 }

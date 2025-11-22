@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c208afbf-4262-4243-acac-cad7938389e9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/dashboard/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/dashboard/server.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/dashboard/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/signIn/api/signInApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/signIn/api/signInApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/signIn/signIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/signIn/signIn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/dashboard/hot-collections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/hot-collections.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/dashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/dashboard/reguler-collections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/reguler-collections.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/dashboard/topBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/topBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/session.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/session.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/middleware.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +106,9 @@
       <workItem from="1763355400578" duration="602000" />
       <workItem from="1763525103573" duration="7983000" />
       <workItem from="1763559824118" duration="1302000" />
-      <workItem from="1763730343596" duration="2747000" />
+      <workItem from="1763730343596" duration="3590000" />
+      <workItem from="1763789126104" duration="3210000" />
+      <workItem from="1763828122352" duration="6738000" />
     </task>
     <servers />
   </component>
