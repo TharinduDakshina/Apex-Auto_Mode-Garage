@@ -9,4 +9,5 @@ export interface VehicleModel {
     total_runs:number;
     price:number;
     image_url:string;
+    vehicle_condition:string;
 }

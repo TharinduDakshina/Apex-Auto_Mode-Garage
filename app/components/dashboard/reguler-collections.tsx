@@ -1,40 +1,21 @@
 "use client"
-export default function RegularCollections() {
-    const collections = [
-        {
-            id: 1,
-            model: "Honda Cr-V 2021",
-            runs: "02 units",
-            condition: "Good",
-            price: "$45,000",
-            actionColor: "blue",
-        },
-        {
-            id: 2,
-            model: "Audi A4 2021",
-            runs: "110,000 km",
-            condition: "Need Servicing",
-            price: "$15,900",
-            actionColor: "default",
-        },
-        {
-            id: 3,
-            model: "Audi Q3 2019",
-            runs: "110,000 km",
-            condition: "Good",
-            price: "$35,400",
-            actionColor: "cyan",
-        },
-        {
-            id: 4,
-            model: "Mercedes-C—Class 2019",
-            runs: "110,000 km",
-            condition: "Excellent",
-            price: "$52,000",
-            actionColor: "default",
-        },
-    ]
+import {VehicleModel} from "@/app/types/vehicles";
+import {useState} from "react";
+import VehiclePopup from "@/app/components/dashboard/vehicalPopup";
 
+export default function RegularCollections({vehicles}: { vehicles: VehicleModel[] }) {
+
+    const [isDialog, setIsDialog] = useState<boolean>(false);
+    const [vehicle, setIsVehicle] = useState<VehicleModel>();
+
+    function handleSeeMoreDetails(item: VehicleModel) {
+        setIsVehicle(item)
+        setIsDialog(true)
+    }
+    function handleDialogClose() {
+        setIsDialog(false)
+
+    }
     return (
         <section>
             <h2 className="text-xl font-semibold text-foreground mb-6">Regular Collections</h2>
@@ -51,21 +32,23 @@ export default function RegularCollections() {
                     </tr>
                     </thead>
                     <tbody>
-                    {collections.map((item) => (
+                    {vehicles.map((item) => (
                         <tr key={item.id} className="border-b border-border hover:bg-muted/30 transition">
-                            <td className="px-6 py-4 text-sm text-foreground">{item.model}</td>
-                            <td className="px-6 py-4 text-sm text-muted-foreground">{item.runs}</td>
-                            <td className="px-6 py-4 text-sm text-muted-foreground">{item.condition}</td>
+                            <td className="px-6 py-4 text-sm text-foreground">{item.vehicle_name}</td>
+                            <td className="px-6 py-4 text-sm text-muted-foreground">{item.total_runs}</td>
+                            <td className="px-6 py-4 text-sm text-muted-foreground">{item.vehicle_condition}</td>
                             <td className="px-6 py-4 text-sm font-medium text-foreground">{item.price}</td>
                             <td className="px-6 py-4">
                                 <button
                                     className={`px-3 py-1 rounded-xl cursor-pointer text-xs font-medium transition ${
-                                        item.actionColor === "blue"
+                                        item.total_runs >= 40000
                                             ? "bg-blue-500 text-white hover:bg-blue-600"
-                                            : item.actionColor === "cyan"
+                                            : item.total_runs >= 20000
                                                 ? "bg-cyan-400 text-cyan-900 hover:bg-cyan-500"
                                                 : "bg-muted text-muted-foreground hover:bg-muted/80"
                                     }`}
+
+                                    onClick={()=>{handleSeeMoreDetails(item)}}
                                 >
                                     See details →
                                 </button>
@@ -75,6 +58,18 @@ export default function RegularCollections() {
                     </tbody>
                 </table>
             </div>
+
+            <VehiclePopup
+                open={isDialog}
+                onClose={handleDialogClose}
+                vehicle={vehicle}
+            />
+
+            {/*{isDialog && (*/}
+            {/*    <>*/}
+            {/*        */}
+            {/*    </>*/}
+            {/*)}*/}
         </section>
     )
 }

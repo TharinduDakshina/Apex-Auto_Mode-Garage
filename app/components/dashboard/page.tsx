@@ -28,7 +28,9 @@ export default function Dashboard() {
                 <HotCollections
                     vehicles={allVehicles}
                 />
-                <RegularCollections/>
+                <RegularCollections
+                    vehicles={allVehicles}
+                />
             </div>
         </main>
     </>)
