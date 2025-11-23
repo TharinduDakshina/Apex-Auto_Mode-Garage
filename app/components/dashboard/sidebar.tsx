@@ -2,7 +2,7 @@
 
 import { Home, Settings, User, LogOut, } from "lucide-react"
 import { useRouter} from "next/navigation";
-import {logOut} from "@/app/components/dashboard/server";
+import {logOut} from "@/app/lib/session";
 
 export default function Sidebar() {
     const router = useRouter()

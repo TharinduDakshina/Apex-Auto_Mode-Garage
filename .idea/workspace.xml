@@ -7,8 +7,12 @@
     <list default="true" id="c208afbf-4262-4243-acac-cad7938389e9" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/app/types/vehicles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/dashboard/hot-collections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/hot-collections.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/dashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/dashboard/reguler-collections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/reguler-collections.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/dashboard/topBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/dashboard/topBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/session.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/session.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/middleware.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,8 +109,7 @@
       <workItem from="1763559824118" duration="1302000" />
       <workItem from="1763730343596" duration="3590000" />
       <workItem from="1763789126104" duration="3210000" />
-      <workItem from="1763828122352" duration="7000000" />
-      <workItem from="1763877329765" duration="7617000" />
+      <workItem from="1763828122352" duration="6738000" />
     </task>
     <servers />
   </component>

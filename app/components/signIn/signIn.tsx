@@ -20,14 +20,12 @@ export default function SignIn() {
         e.preventDefault();
 
         const res = await signInApi(form);
-
         if (res){
             setForm({name: "", password: "",});
-            router.push("/components/dashboard");
+            router.push("./dashboard");
         }else {
             alert("Username or Password is incorrect");
         }
-
     }
 
     return (

@@ -1,6 +1,6 @@
 "use server"
 
-import {cookies} from "next/headers";
+import {updateAccessTokenToCookie, updateRefreshTokenToCookie} from "@/app/lib/session";
 
 const BACKEND_URL = `${process.env.BACKEND_URL}/auth`;
 
@@ -23,17 +23,29 @@ export async function signInApi(form:{name: string, password: string}): Promise<
         return false;
     }
 
-    const token = await response.text();
+    const token:{accessToken:string,refreshToken:string} = await response.json();
     
     // save token in session
-     (await cookies()).set("token", token, {
-        httpOnly: true,
-        secure: true,
-        sameSite: "strict",
-        maxAge: 60 * 60 , // 1H
-        path: "/"
-    });
+    await updateAccessTokenToCookie(token.accessToken);
+    await updateRefreshTokenToCookie(token.refreshToken)
 
+    console.log(token.accessToken);
+    console.log(token.refreshToken);
 
     return true;
+}
+
+export async function renewAccessTokenApi(refreshToken:string){
+    const response = await fetch(`${BACKEND_URL}/accessToken`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            authorization: `Bearer ${refreshToken}`,
+        },
+    })
+    if (!response.ok) {
+        throw new Error(response.statusText)
+    }
+    const accessToken = await response.text()
+    return accessToken
 }
