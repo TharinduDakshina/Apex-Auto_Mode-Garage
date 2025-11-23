@@ -5,7 +5,7 @@ import {BellRingIcon} from "lucide-react";
 export default function TopBar() {
     return (
         <>
-            <div className="flex flex-row  justify-between mb-4">
+            <div className="flex flex-row  justify-between mb-4 ">
 
                 <img src="../logo.png" alt="apex-logo" className="size-18" />
 

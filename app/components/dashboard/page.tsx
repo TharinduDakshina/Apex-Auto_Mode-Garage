@@ -1,17 +1,33 @@
+"use client"
 
 import {Header} from "@/app/components/dashboard/header";
-import Sidebar from "@/app/components/dashboard/sidebar";
 import HotCollections from "@/app/components/dashboard/hot-collections";
 import RegularCollections from "@/app/components/dashboard/reguler-collections";
-import TopBar from "@/app/components/dashboard/topBar";
+import {useEffect, useState} from "react";
+import {fetchAllVehicles} from "@/app/components/dashboard/api/dashboardAPIs";
+import {VehicleModel} from "@/app/types/vehicles";
 
 export default function Dashboard() {
+
+    const [allVehicles, setAllVehicles] = useState<VehicleModel[]>([]);
+
+    useEffect(() => {
+        const load = async () => {
+            const vehicles:VehicleModel[] = await fetchAllVehicles();
+            setAllVehicles(vehicles)
+        }
+        load();
+    },[])
+
+
     return (<>
         <main >
 
             <div className="pl-32 space-y-8 space-x-8">
                 <Header/>
-                <HotCollections/>
+                <HotCollections
+                    vehicles={allVehicles}
+                />
                 <RegularCollections/>
             </div>
         </main>

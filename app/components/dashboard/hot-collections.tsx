@@ -1,130 +1,94 @@
-"use client"
+"use client";
 
+import {JSX, useEffect, useRef} from "react";
 import {CarTaxiFront, Droplet, Dumbbell, MoveVertical, Zap} from "lucide-react";
+import {VehicleModel} from "@/app/types/vehicles";
 
-export default function HotCollections() {
-    return (<section>
+export default function HotCollections({vehicles}: { vehicles: VehicleModel[] }) {
+
+    const scrollRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const container = scrollRef.current;
+        if (!container) return;
+
+        let index = 0;
+
+        const interval = setInterval(() => {
+            if (!container) return;
+
+            index++;
+            const cardWidth = 330; // card width (min-w-[300px] + gap)
+
+            container.scrollTo({
+                left: index * cardWidth,
+                behavior: "smooth"
+            });
+
+            // Reset loop
+            if (index >= vehicles.length - 1) index = -1;
+
+        }, 2000); // auto scroll every 2 seconds
+
+        return () => clearInterval(interval);
+    }, [vehicles]);
+
+    return (
+        <section>
             <h2 className="text-xl font-semibold text-foreground mb-6">🔥 Hot Collections</h2>
 
-            <div className="grid grid-cols-2 gap-8">
-                {/* Range Rover Card */}
-                <div className="bg-orange-300 rounded-2xl p-6 border border-border overflow-hidden">
-                    <div className="flex justify-between items-start mb-6">
-                        <div className="flex-1">
-                            <div className="flex items-center gap-3 mb-4">
-                                <div className="w-8 h-8 bg-gray-400 rounded-full"/>
-
-                                <h3 className="font-semibold text-foreground">Range Rover</h3>
-                            </div>
-
-                            <img src="../cars/rangerover.webp" alt="ranerover-car" width="90%"
-                                 className="rounded-xl opacity-95 pt-8"/>
+            {/* Only 2 cards visible */}
+            <div
+                ref={scrollRef}
+                className="flex gap-12 overflow-hidden scroll-smooth no-scrollbar "
+            >
+                {vehicles.map((v) => (
+                    <div
+                        key={v.id}
+                        className="w-[25%] bg-orange-300 rounded-2xl p-6 border border-border flex-shrink-0 "
+                    >
+                        <div className="flex items-center gap-3 mb-3">
+                            <div className="w-8 h-8 bg-gray-400 rounded-full" />
+                            <h3 className="font-semibold">{v.vehicle_name}</h3>
                         </div>
 
-                        {/* Car image placeholder */}
-                        <div className="flex flex-col p-4 w-80 h-72 " >
-                            <div className="flex flex-row w-full items-center gap-3 mb-2">
-                                <div className="w-11/12 h-20 bg-orange-100 rounded-lg flex flex-col items-center justify-center gap-1 ">
-                                    <Zap className="rounded-full bg-gray-300 size-8 p-1"/>
-                                    <p className="text-xs font-medium text-black font-sans">1997 CC</p>
-                                </div>
+                        <img
+                            src={v.image_url}
+                            alt={v.vehicle_name}
+                            className="rounded-xl w-full object-fill mb-4 opacity-95"
+                        />
 
-                                <div className="w-11/12 h-20 bg-yellow-200 rounded-lg flex flex-col items-center justify-center gap-1 ">
-                                    <Droplet className="rounded-full bg-gray-300 size-8 p-1"/>
-                                    <p className="text-xs font-medium text-black font-sans">6 Speed</p>
-                                </div>
-                            </div>
+                        {/* Specs */}
+                        <div className="grid grid-cols-2 gap-3 mb-3">
+                            <Spec icon={<Zap className="size-8 p-1 bg-gray-300 rounded-full" />} label={`${v.engine_capacity} CC`} />
+                            <Spec icon={<Droplet className="size-8 p-1 bg-gray-300 rounded-full" />} label={`6 Speed`} />
+                            <Spec icon={<MoveVertical className="size-8 p-1 bg-gray-300 rounded-full" />} label={`${v.brake_horsepower} BHP`} />
+                            <Spec icon={<Dumbbell className="size-8 p-1 bg-gray-300 rounded-full" />} label={`${v.cylinder_capacity} Cylinder`} />
+                        </div>
 
-                            <div className="flex flex-row w-full items-center gap-3 mb-2">
+                        <div className="flex items-center gap-3 bg-blue-100 rounded-xl p-3 mb-3">
+                            <CarTaxiFront className="size-9 p-1 bg-gray-300 rounded-full" />
+                            <p className="text-xs font-medium">
+                                Total Run: {v.total_runs.toLocaleString()} Km
+                            </p>
+                        </div>
 
-                                <div className="w-11/12 h-20 bg-yellow-100 rounded-lg flex flex-col items-center justify-center gap-1 ">
-                                    <MoveVertical className="rounded-full bg-gray-300 size-8 p-1"/>
-                                    <p className="text-xs font-medium text-black font-sans">246.4 BHP</p>
-                                </div>
-
-                                <div className="w-11/12 h-20 bg-blue-100 rounded-lg flex flex-col items-center justify-center gap-1 ">
-                                    <Dumbbell className="rounded-full bg-gray-300 size-8 p-1"/>
-                                    <p className="text-xs font-medium text-black font-sans">4 Cylinder</p>
-                                </div>
-                            </div>
-
-                            <div className="flex flex-row w-full h-40 bg-blue-100 opacity-80 justify-center items-center rounded-xl pl-2 gap-3 mb-1">
-
-                                <div className="flex flex-row justify-between items-center gap-3">
-                                    <CarTaxiFront className="rounded-full bg-gray-300 size-9 p-1"/>
-                                    <p className="text-xs font-medium text-black font-sans ">Total Run : 20 000 Km</p>
-                                </div>
-                            </div>
+                        <div className="border-t pt-3">
+                            <p className="text-2xl font-bold">${v.price}</p>
+                            <p className="text-xs text-muted-foreground">See details</p>
                         </div>
                     </div>
-
-                    <div className="flex justify-between items-end pt-4 border-t border-border">
-                        <div>
-                            <p className="text-2xl font-bold text-foreground">$38,700</p>
-                            <p className="text-xs text-muted-foreground mt-1">See details</p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Nissan GTR Card */}
-                <div className="bg-gray-300 rounded-2xl p-6 border border-border overflow-hidden">
-                    <div className="flex justify-between items-start mb-6">
-                        <div className="flex-1">
-                            <div className="flex items-center gap-3 mb-4">
-                                <div className="w-8 h-8 bg-gray-400 rounded-full"/>
-
-                                <h3 className="font-semibold text-foreground">Nisan GTR</h3>
-                            </div>
-
-                            <img src="../cars/nisan_gtr.avif" alt="ranerover-car" width="90%"
-                                 className="pt-8 rounded-xl opacity-95 "/>
-                        </div>
-
-                        {/* Car image placeholder */}
-                        <div className="flex flex-col p-4 w-80 h-72 " >
-                            <div className="flex flex-row w-full items-center gap-3 mb-2">
-                                <div className="w-11/12 h-20 bg-orange-100 rounded-lg flex flex-col items-center justify-center gap-1 ">
-                                    <Zap className="rounded-full bg-gray-300 size-8 p-1"/>
-                                    <p className="text-xs font-medium text-black font-sans">3799 CC</p>
-                                </div>
-
-                                <div className="w-11/12 h-20 bg-yellow-200 rounded-lg flex flex-col items-center justify-center gap-1 ">
-                                    <Droplet className="rounded-full bg-gray-300 size-8 p-1"/>
-                                    <p className="text-xs font-medium text-black font-sans">6 Speed</p>
-                                </div>
-                            </div>
-
-                            <div className="flex flex-row w-full items-center gap-3 mb-2">
-
-                                <div className="w-11/12 h-20 bg-purple-200 rounded-lg flex flex-col items-center justify-center gap-1 ">
-                                    <MoveVertical className="rounded-full bg-gray-300 size-8 p-1"/>
-                                    <p className="text-xs font-medium text-black font-sans">591.4 BHP</p>
-                                </div>
-
-                                <div className="w-11/12 h-20 bg-green-100 rounded-lg flex flex-col items-center justify-center gap-1 ">
-                                    <Dumbbell className="rounded-full bg-gray-300 size-8 p-1"/>
-                                    <p className="text-xs font-medium text-black font-sans">6 Cylinder</p>
-                                </div>
-                            </div>
-
-                            <div className="flex flex-row w-full h-40 bg-green-400 opacity-80 justify-center items-center rounded-xl pl-2 gap-3 mb-1">
-
-                                <div className="flex flex-row justify-between items-center gap-3">
-                                    <CarTaxiFront className="rounded-full bg-gray-300 size-9 p-1"/>
-                                    <p className="text-xs font-medium text-black font-sans ">Total Run : 9 254 Km</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="flex justify-between items-end pt-4 border-t border-border">
-                        <div>
-                            <p className="text-2xl font-bold text-foreground">$187,700</p>
-                            <p className="text-xs text-muted-foreground mt-1">See details</p>
-                        </div>
-
-                    </div>
-                </div>
+                ))}
             </div>
-        </section>)
+        </section>
+    );
+}
+
+function Spec({ icon, label }: { icon: JSX.Element; label: string }) {
+    return (
+        <div className="h-20 bg-white rounded-lg flex flex-col items-center justify-center shadow-sm">
+            {icon}
+            <p className="text-xs font-medium">{label}</p>
+        </div>
+    );
 }
